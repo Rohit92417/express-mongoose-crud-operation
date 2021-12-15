@@ -4,7 +4,7 @@ const verify = require("../middleware/auth")
 //User register
 router.post("/register",userController.create)
 //User login to get JWT token
-router.get("/login",userController.login)
+router.post("/login",userController.login)
 //Update user data
 router.put("/update/:id",verify,userController.edit)
 //Delete user data
