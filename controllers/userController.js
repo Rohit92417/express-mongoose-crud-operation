@@ -6,6 +6,7 @@ const JWT = require("jsonwebtoken");
 
 //Register
 exports.create = async (req, res) => {
+  let key = "SECRET_KEY"
   var checkPasswordLenght = req.body.password;
   if (checkPasswordLenght.length <= 15 && checkPasswordLenght.length >= 8) {
     try {
